@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: protox-test1-7453-api-966b
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: CORS_ORIGINS
+        value: https://sanjana-git456.github.io
